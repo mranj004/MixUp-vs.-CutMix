@@ -1,6 +1,15 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/mkANUJWP)
-Hi,
-Thanks for taking a look of my project. To see the training data from the seed used in this project, refer to the all metric files. The read my write-up, click on the pdf file
+MixUp vs. CutMix: Regularization Study on CIFAR-10
+Overview
 
-Thank you,
-Mihir
+This project compares MixUp and CutMix, two data-augmentation and regularization strategies for image classification. Using a ResNet-18 classifier trained on CIFAR-10, the study evaluates how each method affects validation accuracy, loss behavior, and training stability under a controlled optimization setup.
+
+The training framework uses AdamW optimization, warm-up followed by cosine learning-rate scheduling, mixed-precision training, reproducibility controls, checkpointing, and epoch-level metric logging. MixUp blends full images and labels, while CutMix replaces localized image regions and adjusts labels by the replaced area.
+
+Project Goals:
+Implements baseline, MixUp, and CutMix training configurations for controlled comparison.
+Uses ResNet-18, AdamW, mixed-precision training, and warm-up/cosine learning-rate scheduling.
+Logs training loss, validation loss, and validation accuracy across epochs.
+Achieved peak recorded validation accuracies of 94.47% with MixUp and 94.67% with CutMix.
+
+Tools used
+Python, PyTorch, torchvision, ResNet-18, AdamW, mixed-precision training, CIFAR-10
